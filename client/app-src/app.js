@@ -13,6 +13,6 @@ const config = {
     headers,
     body 
 };
-
-fetch('/negociacoes', config)
+// Adequação para usar o Webpack Dev Server
+fetch('http://localhost:3000/negociacoes', config)
     .then(() => console.log('Dado enviado com sucesso'));

@@ -5,10 +5,13 @@ var express = require('express')
     ,routes = require('../app/routes')
     ,path =  require('path')
     ,bodyParser = require('body-parser');
-
+    
+// Adequação para usar o Webpack Dev Server
+/*    
 app.set('clientPath', path.join(__dirname, '../..', 'client'));
 console.log(app.get('clientPath'));
 app.use(express.static(app.get('clientPath')));
+*/
 app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
