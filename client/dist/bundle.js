@@ -450,7 +450,7 @@ const config = {
     body
 };
 // Adequação para usar o Webpack Dev Server
-fetch('http://localhost:3000/negociacoes', config).then(() => console.log('Dado enviado com sucesso'));
+fetch(`${"http://localhost:3000"}/negociacoes`, config).then(() => console.log('Dado enviado com sucesso'));
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
@@ -508,8 +508,6 @@ let NegociacaoController = (_dec = __WEBPACK_IMPORTED_MODULE_2__util_index_js__[
         this._negociacoes = new __WEBPACK_IMPORTED_MODULE_2__util_index_js__["a" /* Bind */](new __WEBPACK_IMPORTED_MODULE_0__domain_index_js__["b" /* Negociacoes */](), new __WEBPACK_IMPORTED_MODULE_1__ui_index_js__["d" /* NegociacoesView */]('#negociacoes'), 'adiciona', 'esvazia');
 
         this._mensagem = new __WEBPACK_IMPORTED_MODULE_2__util_index_js__["a" /* Bind */](new __WEBPACK_IMPORTED_MODULE_1__ui_index_js__["b" /* Mensagem */](), new __WEBPACK_IMPORTED_MODULE_1__ui_index_js__["c" /* MensagemView */]('#mensagemView'), 'texto');
-
-        // this._service = new NegociacaoService();
 
         this._init();
     }

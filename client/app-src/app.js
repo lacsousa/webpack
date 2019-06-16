@@ -1,9 +1,9 @@
 import { NegociacaoController } from './controllers/NegociacaoController.js';
 import { Negociacao } from './domain/index.js';
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/css/bootstrap-theme.css'
-import 'bootstrap/js/modal.js'
-import '../css/meucss.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/js/modal.js';
+import '../css/meucss.css';
 
 
 $('h1').click(() => alert('você me clicou'));
@@ -22,5 +22,5 @@ const config = {
     body 
 };
 // Adequação para usar o Webpack Dev Server
-fetch('http://localhost:3000/negociacoes', config)
+fetch(`${SERVICE_URL}/negociacoes`, config)
     .then(() => console.log('Dado enviado com sucesso'));

@@ -21,8 +21,6 @@ export class NegociacaoController {
             'texto'
         );
 
-        // this._service = new NegociacaoService();
-
         this._init();
     }
 
@@ -75,9 +73,9 @@ export class NegociacaoController {
     async importaNegociacoes() {
 
         try {
-            const {NegociacaoService }= await System.import('../domain/negociacao/NegociacaoService.js');
-            const service = new NegociacaoService();  
-            
+            const { NegociacaoService } = await import('../domain/negociacao/NegociacaoService');
+            const service = new NegociacaoService();
+
             const negociacoes = await service.obtemNegociacoesDoPeriodo();
             console.log(negociacoes);
             negociacoes.filter(novaNegociacao =>
